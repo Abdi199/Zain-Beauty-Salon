@@ -1,3 +1,28 @@
+html {
+	font-size: 10px;
+}
+
+.header {
+	background-color: blueviolet;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	height: 4rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.header__text {
+	background-color: aqua;
+	text-align: center;
+}
+
+.header__button {
+	background-color: blue;
+	
+	justify-self: flex-start;
+	display: flex;
+}
+
 .slideshow {
 	width: 80vw;
 	height: 80vh;
@@ -10,6 +35,7 @@
 	height: 100%;
 	display: block;
 	object-fit: contain;
+
 }
 
 .slideshow__slide {
@@ -30,7 +56,7 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	font-size: 25px;
+	font-size: 2.5rem;
 	cursor: pointer;
 }
 
@@ -42,4 +68,11 @@
 	right: 0;
 }
 
-
+.slideshow__text {
+	font-size: 3rem;
+	position: absolute;
+	bottom: -4rem;
+	text-align: center;
+	width: 100%;
+	
+}
