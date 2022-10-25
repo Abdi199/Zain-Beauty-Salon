@@ -1,5 +1,4 @@
 .slideshow {
-	background-color: aqua;
 	width: 80vw;
 	height: 80vh;
 	margin: 0 auto;
@@ -16,7 +15,6 @@
 .slideshow__slide {
 	width: 100%;
 	height: 100%;
-	background-color: red;
 	position: absolute;
 	top: 0;
 	left: 0;
