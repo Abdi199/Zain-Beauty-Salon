@@ -2,15 +2,32 @@
 const buttonPrevious = document.querySelector('.slideshow__button-previous');
 const buttonNext = document.querySelector('.slideshow__button-next');
 const slides = document.querySelectorAll('.slideshow__slide');
+const menuButton = document.querySelector('.header__button-menu');
+const navigation = document.querySelector('.header__navigation');
+const dots = document.querySelectorAll('.slideshow__dot')
+
 
 // Eventlisteners
 buttonPrevious.addEventListener('click', handleButtonPreviousClick);
 buttonNext.addEventListener('click', handleButtonNextClick);
 
+for(let index = 0; index < slides.length; index += 1) {
+	dots[index].addEventListener('click', event => {
+		handleDotsClick(index);
+	});
+}
+
+
+
 // Handlers
 function handleButtonPreviousClick() {
 	decreaseIndex();
 	displaySlide();
+}
+
+function handleDotsClick(index) {
+currentSLideIndex = index;
+displaySlide();
 }
 
 function handleButtonNextClick() {
@@ -21,6 +38,7 @@ function handleButtonNextClick() {
 
 // Variables
 let currentSLideIndex = 0;
+let istoggleMenuOpen = false;
 displaySlide();
 
 // Functions
@@ -49,3 +67,22 @@ function displaySlide() {
 	slides[currentSLideIndex].classList.add('slideshow__slide--visible');
 }
 
+ menuButton.addEventListener('click', handleMenuButton)
+
+ 
+
+function handleMenuButton() {
+	toggleMenu();
+}
+
+
+
+function toggleMenu() {
+	if (istoggleMenuOpen === false) {
+		navigation.classList.add('header__navigation--open');
+		istoggleMenuOpen = true;
+	} else {
+		navigation.classList.remove ('header__navigation--open');
+		istoggleMenuOpen = false;
+	}
+}
