@@ -1,14 +1,25 @@
 html {
 	font-size: 10px;
+	font-family: 'inter', sans-serif;
 }
 
 .header {
 	background-color: blueviolet;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	border: 1rem;
 	height: 4rem;
 	align-items: center;
 	justify-content: center;
+	
+}
+
+.header__navigation {
+	display: none;
+}
+
+.header__navigation--open {
+	display: block;
 }
 
 .header__text {
@@ -16,11 +27,14 @@ html {
 	text-align: center;
 }
 
-.header__button {
+.header__button-menu {
 	background-color: blue;
-	
-	justify-self: flex-start;
-	display: flex;
+	border-radius: 1rem;
+	z-index: 10;
+	width: 6rem;
+	height: 4rem;
+	font-size: 2rem;
+	cursor: pointer;
 }
 
 .slideshow {
@@ -76,3 +90,24 @@ html {
 	width: 100%;
 	
 }
+
+
+.slideshow__dots-wrapper {
+	position: absolute;
+	bottom: 1rem;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 1rem;
+}
+
+.slideshow__dot {
+	background-color: red;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.4s;
+	z-index: 20;
+}
+
