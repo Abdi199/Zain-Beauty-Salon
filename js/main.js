@@ -3,18 +3,3 @@ import Slideshow from '/js/modules/slideshow.js';
 
 Header();
 Slideshow();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

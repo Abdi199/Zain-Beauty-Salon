@@ -43,6 +43,25 @@
 	right: 0;
 }
 
+.slideshow__button-previous,
+.slideshow__button-next {
+	width: 5rem;
+	height: 5rem;
+}
+
+.slideshow__button-previous:hover,
+.slideshow__button-next:hover {
+	background-color: blanchedalmond;
+}
+
+
+.slideshow__button-previous img,
+.slideshow__button-next img {
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
 .slideshow__text {
 	font-size: 3rem;
 	position: absolute;
