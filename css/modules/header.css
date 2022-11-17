@@ -1,0 +1,41 @@
+.header {
+	width: 100vw;
+	height: 50px;
+	justify-content: flex-start;
+	display: flex;
+	padding-right: 5px;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 999999999999;
+}
+
+.header__navigation {
+	position: absolute;
+	top: 50px;
+	left: 15px;
+	list-style: none;
+	display: none;
+}
+
+.header__navigation--open {
+	display: block;
+
+}
+
+.header__text {
+	color: palevioletred;
+	text-align:left;
+	gap: 20;
+}
+
+.header__button-menu {
+	background-color: blue;
+	border-radius: 1rem;
+	z-index: 10;
+	width: 6rem;
+	height: 4rem;
+	font-size: 2rem;
+	cursor: pointer;
+}
