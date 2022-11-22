@@ -81,11 +81,16 @@
 }
 
 .slideshow__dot {
-	background-color: red;
+	background-color:aliceblue;
 	width: 2rem;
 	height: 2rem;
 	border-radius: 50%;
 	cursor: pointer;
 	transition: 0.4s;
 	z-index: 20;
+}
+
+.slideshow__dot--active {
+	background-color: rgb(93, 86, 86);
+	transform: scale(0.9);
 }
