@@ -23,15 +23,18 @@ export default function Slideshow() {
 	function handleButtonPreviousClick() {
 		decreaseIndex();
 		displaySlide();
+		giveDotActiveClass();
 	}
 
 	function handleDotsClick(index) {
 		currentSLideIndex = index;
+		giveDotActiveClass();
 	}
 		
 	function handleButtonNextClick() {
 		increasIndex();
 		displaySlide();
+		giveDotActiveClass();
 	}
 
 	// Methods
@@ -60,6 +63,15 @@ export default function Slideshow() {
 		slides[currentSLideIndex].classList.add('slideshow__slide--visible');
 	}
 
+	function giveDotActiveClass() {
+		for (let index = 0; index < dots.length; index += 1) {
+			dots[index].classList.remove('slideshow__dot--active');
+		}
+
+		dots[currentSLideIndex].classList.add('slideshow__dot--active');
+	}
+
 	// Called methods
 	displaySlide();
+	giveDotActiveClass();
 }
