@@ -8,7 +8,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	z-index: 999999999999;
+	z-index: 999;
 }
 
 .header__navigation {
@@ -25,13 +25,14 @@
 }
 
 .header__text {
-	color: palevioletred;
+	color: var(--tertiary-color);
 	text-align:left;
-	gap: 20;
+	
+	
 }
 
 .header__button-menu {
-	background-color: blue;
+	background-color: var(--primary-color);
 	border-radius: 1rem;
 	z-index: 10;
 	width: 6rem;
