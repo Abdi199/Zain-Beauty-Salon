@@ -3,3 +3,7 @@ html {
 	font-family: 'inter', sans-serif;
 	color: var(--primary-text-color);;
 }
+
+body {
+	background-color: var(--tertiary-color);
+}
