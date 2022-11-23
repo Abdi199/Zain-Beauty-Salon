@@ -71,7 +71,14 @@ export default function Slideshow() {
 		dots[currentSLideIndex].classList.add('slideshow__dot--active');
 	}
 
+	function automaticSlideshow() {
+		increasIndex();
+		displaySlide();
+		giveDotActiveClass();
+	}
+
 	// Called methods
+	setInterval(automaticSlideshow, 5 * 1000);
 	displaySlide();
 	giveDotActiveClass();
 }
