@@ -46,7 +46,10 @@ export default function Slideshow() {
 		}
 	}
 
-
+	/**
+	* This function decreases currentSlideIndex, as long as the number is over 0.
+	* Is it 0 it will set the index to be at the end of slides array.
+	**/
 	function decreaseIndex() {
 		if (currentSLideIndex > 0) {
 			currentSLideIndex = currentSLideIndex - 1;
