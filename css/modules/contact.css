@@ -1,8 +1,51 @@
+.contact {
+	max-width: 50rem;
+	margin: 10rem auto;
+	border: solid var(--primary-text-color);
+	padding: 2rem;
+	border-radius: 0.4rem;
+}
+
 .contact__form {
  display: flex;
  flex-direction: column;
- width: 40rem;
+ width: 100%;
  font-size: 2rem;
- gap: 1rem;
+ gap: 2rem;
+}
 
+.contact__header {
+	font-size: 3rem;
+	padding-bottom: 2rem;
+}
+
+.contact__input-container {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.contact__form input {
+	font-size: inherit;
+	height: 3rem;
+}
+
+.contact__form input::placeholder {
+	color: #bababa;
+}
+
+.contact__submit-button {
+	color: var(--primary-text-color);
+	font-family: inherit;
+	background-color: inherit;
+	cursor: pointer;
+	border: solid 2px var(--primary-text-color);
+	transition: all 0.3s;
+	border-radius: 1rem;
+	padding: 1rem;
+	font-weight: 600;
+}
+
+.contact__submit-button:hover {
+	background-color: var(--primary-color-darker);
 }
