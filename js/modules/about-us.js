@@ -1,5 +1,7 @@
 export default function AboutUs() {
 	let isplaying = false;
+
+	// Creat new audio and the source for it
 	const audio = new Audio();
 	audio.src = '/assets/audio/wedding.mp3'
 	

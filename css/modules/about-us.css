@@ -14,7 +14,9 @@
 
 .about-us__header {
 	position: absolute;
-	top: 10vh;
+	width: 100%;
+	text-align: center;
+	top: 5rem;
 	left: 50%;
 	transform: translateX(-50%);
 	font-size: 5rem;
@@ -23,7 +25,8 @@
 .about-us__description {
 	max-width: 100rem;
 	margin: 3rem auto;
-	font-size: 2rem;
+	padding: 0 2rem;
+	font-size: 3rem;
 }
 
 .about-us__play-button {
@@ -42,4 +45,22 @@
 
 .about-us__play-button:hover {
 	background-color: var(--primary-color-darker);
+}
+
+@media screen and (max-width: 1100px) {
+	.about-us__header {
+		top: 2rem;
+	}
+
+
+}
+
+@media screen and (max-width: 600px) {
+	.about-us__header {
+		font-size: 3rem;
+	}
+
+	.about-us__description {
+		font-size: 2rem;
+	}
 }
