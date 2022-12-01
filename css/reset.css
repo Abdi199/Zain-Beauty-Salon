@@ -7,3 +7,11 @@
 button {
 	font: inherit;
 }
+
+button {
+	font-size: inherit;
+	font-family: inherit;
+	background-color: inherit;
+	border: none;
+	color: inherit;
+}
