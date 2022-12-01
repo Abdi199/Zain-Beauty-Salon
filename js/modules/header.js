@@ -26,10 +26,17 @@ export default function Header() {
 	}
 	
 	// Methods
+	/**
+	* This function changes isMenuOpen to the opposite.
+	* @example isMenuOpen = false // set is isMenuOpen = true.
+	**/
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
 	}
-
+   
+	/**
+	* This function changes the html based on isMenuOpen.
+	**/
 	function renderHTML() {
 		if (isMenuOpen === true) {
 			navigation.classList.add('header__navigation--open');
