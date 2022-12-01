@@ -1,7 +1,8 @@
 html {
 	font-size: 10px;
 	font-family: 'inter', sans-serif;
-	color: var(--primary-text-color);;
+	color: var(--primary-text-color);
+	scroll-behavior: smooth;
 }
 
 body {
