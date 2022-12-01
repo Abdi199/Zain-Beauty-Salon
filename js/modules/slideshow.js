@@ -38,6 +38,10 @@ export default function Slideshow() {
 	}
 
 	// Methods
+	/**
+	* this function increases currentSlideIndex, as long as currentSlideIndex is not at the end of slides: 
+	* Is it at the end of slides, it will set currentSlideIndex to 0.
+	**/
 	function increasIndex() {
 		if (currentSLideIndex < slides.length - 1) {
 			currentSLideIndex = currentSLideIndex + 1;
@@ -58,6 +62,9 @@ export default function Slideshow() {
 		}
 	}
 
+	/**
+	* this function removes visible class from all slides and ads it to slide with currentSLideIndex.
+	**/
 	function displaySlide() {
 		for (let index = 0; index < slides.length; index += 1) {
 			slides[index].classList.remove('slideshow__slide--visible');
@@ -66,6 +73,10 @@ export default function Slideshow() {
 		slides[currentSLideIndex].classList.add('slideshow__slide--visible');
 	}
 
+
+	/**
+	* this function removes active class from all dots and ads it to dot with currentSLideIndex.
+	**/
 	function giveDotActiveClass() {
 		for (let index = 0; index < dots.length; index += 1) {
 			dots[index].classList.remove('slideshow__dot--active');
