@@ -2,7 +2,7 @@ export default function Header() {
 	// Data 
 	let isMenuOpen = false;
 	
-	// Selectors
+	// Querryselectors
 	const menuButton = document.querySelector('.header__button-menu');
 	const navigation = document.querySelector('.header__navigation');
 	const navigationButton = document.querySelectorAll('.header__navigation-button')
@@ -26,6 +26,7 @@ export default function Header() {
 	}
 	
 	// Methods
+
 	/**
 	* This function changes isMenuOpen to the opposite.
 	* @example isMenuOpen = false // set is isMenuOpen = true.

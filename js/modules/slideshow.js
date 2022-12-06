@@ -2,7 +2,7 @@ export default function Slideshow() {
 	// Data
 	let currentSLideIndex = 0;
 
-	// Selectors
+	// Querryselectors
 	const buttonPrevious = document.querySelector('.slideshow__button-previous');
 	const buttonNext = document.querySelector('.slideshow__button-next');
 	const slides = document.querySelectorAll('.slideshow__slide');
@@ -13,28 +13,25 @@ export default function Slideshow() {
 	buttonNext.addEventListener('click', handleButtonNextClick);
 
 	for(let index = 0; index < slides.length; index += 1) {
-		dots[index].addEventListener('click', event => {
+		dots[index].addEventListener('click', () => {
 			handleDotsClick(index);
-			displaySlide();
 		});
 	}
 
 	// Handlers
 	function handleButtonPreviousClick() {
 		decreaseIndex();
-		displaySlide();
-		giveDotActiveClass();
+		renderHTML();
 	}
 
 	function handleDotsClick(index) {
 		currentSLideIndex = index;
-		giveDotActiveClass();
+		renderHTML();
 	}
 		
 	function handleButtonNextClick() {
 		increasIndex();
-		displaySlide();
-		giveDotActiveClass();
+		renderHTML();
 	}
 
 	// Methods
@@ -62,6 +59,16 @@ export default function Slideshow() {
 		}
 	}
 
+	function automaticSlideshow() {
+		increasIndex();
+		renderHTML();
+	}
+
+	function renderHTML() {
+		displaySlide();
+		giveDotActiveClass();
+	}
+
 	/**
 	* this function removes visible class from all slides and ads it to slide with currentSLideIndex.
 	**/
@@ -72,7 +79,6 @@ export default function Slideshow() {
 
 		slides[currentSLideIndex].classList.add('slideshow__slide--visible');
 	}
-
 
 	/**
 	* this function removes active class from all dots and ads it to dot with currentSLideIndex.
@@ -85,14 +91,8 @@ export default function Slideshow() {
 		dots[currentSLideIndex].classList.add('slideshow__dot--active');
 	}
 
-	function automaticSlideshow() {
-		increasIndex();
-		displaySlide();
-		giveDotActiveClass();
-	}
-
 	// Called methods
-	setInterval(automaticSlideshow, 5 * 1000);
+	setInterval(automaticSlideshow, 5 * 1000); // Changes the slide every 5 second
 	displaySlide();
 	giveDotActiveClass();
 }

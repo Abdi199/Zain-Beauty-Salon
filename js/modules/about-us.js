@@ -1,19 +1,25 @@
 export default function AboutUs() {
+	// Data
 	let isplaying = false;
 
-	// Creat new audio and the source for it
+	// Creat new audio and select the source for it.
 	const audio = new Audio();
 	audio.src = '/assets/audio/wedding.mp3'
 	
+	// Querryselectors
 	const playButton = document.querySelector('.about-us__play-button')
+
+	// Eventlisteners
 	playButton.addEventListener('click', handlePlayButtonClick);
 
+	// Handlers
 	function handlePlayButtonClick() {
 		toggleIsPlaying();
 		togglePlay();
 		renderHTML();
 	}
 
+	// Methods
 	function toggleIsPlaying() {
 		isplaying = !isplaying;
 	}
