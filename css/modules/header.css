@@ -93,19 +93,33 @@
 	}
 }
 
+@media screen and (max-width: 450px) {
+	.header__text {
+		font-size: 2rem;
+	}
+}
+
 @media screen and (max-width: 400px) {
 	.header {
 		padding: 0 0.5rem;
 	}
 
 	.header__text {
-		font-size: 2rem;
-	}
-}
-
-
-@media screen and (max-width: 350px) {
-	.header__text {
 		font-size: 1.5rem;
 	}
 }
+
+@media screen and (max-width: 350px) {
+	.header__text {
+		font-size: 1.3rem;
+	}
+
+	.header__logo {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+
+
+
+
