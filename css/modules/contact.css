@@ -6,17 +6,17 @@
 	border-radius: 0.4rem;
 }
 
+.contact__header {
+	font-size: 3rem;
+	padding-bottom: 2rem;
+}
+
 .contact__form {
  display: flex;
  flex-direction: column;
  width: 100%;
  font-size: 2rem;
  gap: 2rem;
-}
-
-.contact__header {
-	font-size: 3rem;
-	padding-bottom: 2rem;
 }
 
 .contact__input-container {
@@ -31,7 +31,7 @@
 }
 
 .contact__form input::placeholder {
-	color: #bababa;
+	color: var(--text-color-light);
 }
 
 .contact__submit-button {

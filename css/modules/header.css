@@ -12,11 +12,49 @@
 	background-color: var(--primary-color);
 }
 
+.header__button-menu {
+	background-color: var(--primary-color);
+	color: var(--primary-text-color);
+	border-radius: 1rem;
+	z-index: 10;
+	font-size: 2.5rem;
+	font-weight: 600;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	border: solid 2px var(--primary-text-color);
+	transition: all 0.3s;
+}
+
+.header__button-menu:hover {
+	background-color: var(--primary-color-darker);
+}
+
+.header__logo-text-container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.header__text {
+	font-size: 3rem;
+	color: var(--primary-text-color);
+	text-align: left;
+}
+
+.header__logo {
+	height: 3.5rem;
+	width: 3.5rem;
+}
+
+.header__logo img {
+	height: 100%;
+	width: auto;
+}
+
 .header__navigation {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-
 	background-color: var(--primary-color);
 	position: absolute;
 	top: 7rem;
@@ -42,45 +80,6 @@
 
 .header__navigation--open {
 	display: flex;
-}
-
-.header__logo-text-container {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
-}
-
-.header__text {
-	font-size: 3rem;
-	color: var(--primary-text-color);
-	text-align: left;
-}
-
-.header__logo {
-	height: 3.5rem;
-	width: 3.5rem;
-}
-
-.header__logo img {
-	height: 100%;
-	width: auto;
-}
-
-.header__button-menu {
-	background-color: var(--primary-color);
-	color: var(--primary-text-color);
-	border-radius: 1rem;
-	z-index: 10;
-	font-size: 2.5rem;
-	font-weight: 600;
-	padding: 0.5rem 1rem;
-	cursor: pointer;
-	border: solid 2px var(--primary-text-color);
-	transition: all 0.3s;
-}
-
-.header__button-menu:hover {
-	background-color: var(--primary-color-darker);
 }
 
 @media screen and (max-width: 500px) {
@@ -119,7 +118,3 @@
 		height: 2rem;
 	}
 }
-
-
-
-
