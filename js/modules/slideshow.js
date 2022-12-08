@@ -35,8 +35,9 @@ export default function Slideshow() {
 	}
 
 	// Methods
+
 	/**
-	* this function increases currentSlideIndex, as long as currentSlideIndex is not at the end of slides: 
+	* this function increases currentSlideIndex, as long as currentSlideIndex is not at the end of slides.
 	* Is it at the end of slides, it will set currentSlideIndex to 0.
 	**/
 	function increasIndex() {
@@ -59,11 +60,18 @@ export default function Slideshow() {
 		}
 	}
 
+	/**
+	 * This function goes to the next image and is called with a setInterval function to every 5 second.
+	 */
 	function automaticSlideshow() {
 		increasIndex();
 		renderHTML();
 	}
 
+	/**
+	 * This is the main function which changes the HTML. 
+	 * It has subfunction which change different parts of the HTML
+	 */
 	function renderHTML() {
 		displaySlide();
 		giveDotActiveClass();
@@ -92,7 +100,6 @@ export default function Slideshow() {
 	}
 
 	// Called methods
-	setInterval(automaticSlideshow, 5 * 1000); // Changes the slide every 5 second
-	displaySlide();
-	giveDotActiveClass();
+	setInterval(automaticSlideshow, 5 * 1000); // Changes the slide every 5 second.
+	renderHTML(); // I Have to call this once to display first image and dot.
 }

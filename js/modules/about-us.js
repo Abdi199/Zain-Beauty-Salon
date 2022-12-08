@@ -15,16 +15,24 @@ export default function AboutUs() {
 	// Handlers
 	function handlePlayButtonClick() {
 		toggleIsPlaying();
-		togglePlay();
+		renderAudio();
 		renderHTML();
 	}
 
 	// Methods
+
+	/**
+	 * Toggels isPlaying between true and false
+	 */
 	function toggleIsPlaying() {
 		isplaying = !isplaying;
 	}
 
-	function togglePlay() {
+	/**
+	 * This plays or pauses the music based on the state of isPlaying
+	 * @Example isPlaying = false // audio.pause()
+	 */
+	function renderAudio() {
 		if (isplaying) {
 			audio.play();
 		} else {
@@ -32,6 +40,9 @@ export default function AboutUs() {
 		}
 	}
 
+	/**
+	 * This changes the text of the Play/Pause button based on the state of isPlaying
+	 */
 	function renderHTML() {
 		if (isplaying) {
 			playButton.innerText = 'Pause Music'
