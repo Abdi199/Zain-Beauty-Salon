@@ -4,10 +4,10 @@ export default function AboutUs() {
 
 	// Creat new audio and select the source for it.
 	const audio = new Audio();
-	audio.src = '/assets/audio/wedding.mp3'
+	audio.src = '/assets/audio/wedding.mp3';
 	
 	// Querryselectors
-	const playButton = document.querySelector('.about-us__play-button')
+	const playButton = document.querySelector('.about-us__play-button');
 
 	// Eventlisteners
 	playButton.addEventListener('click', handlePlayButtonClick);

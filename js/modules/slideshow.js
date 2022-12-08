@@ -6,7 +6,7 @@ export default function Slideshow() {
 	const buttonPrevious = document.querySelector('.slideshow__button-previous');
 	const buttonNext = document.querySelector('.slideshow__button-next');
 	const slides = document.querySelectorAll('.slideshow__slide');
-	const dots = document.querySelectorAll('.slideshow__dot')
+	const dots = document.querySelectorAll('.slideshow__dot');
 
 	// Eventlisteners
 	buttonPrevious.addEventListener('click', handleButtonPreviousClick);

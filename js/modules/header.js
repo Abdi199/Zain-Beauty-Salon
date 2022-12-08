@@ -7,15 +7,15 @@ export default function Header() {
 	// This selects elements in HTML and is how jacascript interacts with it.
 	const menuButton = document.querySelector('.header__button-menu');
 	const navigation = document.querySelector('.header__navigation');
-	const navigationButtons = document.querySelectorAll('.header__navigation-button')
+	const navigationButtons = document.querySelectorAll('.header__navigation-button');
 	
 	// Eventlisteners
 	// Added an eventlistener on menuButton listening for a click. When that happens it runs the handler function.
-	menuButton.addEventListener('click', handleMenuButtonClick)
+	menuButton.addEventListener('click', handleMenuButtonClick);
 
 	// Added an eventlistener on each navigationButton listening for a click, that's why I use a loop.
 	for(let index = 0; index < navigationButtons.length; index += 1) {
-		navigationButtons[index].addEventListener('click', handleNavigationButtonClick)
+		navigationButtons[index].addEventListener('click', handleNavigationButtonClick);
 	}
 	
 	// Handlers
